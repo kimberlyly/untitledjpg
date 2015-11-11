@@ -247,18 +247,18 @@ header .header-content .header-content-inner p {
     margin-top: 0;
 }
 
-.service-box {
+.person-box {
     margin: 50px auto 0;
     max-width: 400px;
 }
 
 @media(min-width:992px) {
-    .service-box {
+    .person-box {
         margin: 20px auto 0;
     }
 }
 
-.service-box p {
+.person-box p {
     margin-bottom: 0;
 }
 
@@ -488,6 +488,7 @@ input[type="text"] {
 }
 
 .bigInput {
-    font-size: 14px;
-    height: 20px;
+    font-size: 20px;
+    height: 35px;
+    width: 250px;
 }

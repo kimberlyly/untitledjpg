@@ -82,7 +82,7 @@
         </div>
     </section>
 
-    <section id="upcoming">
+    <section id="services">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -92,26 +92,42 @@
             </div>
         </div>
         <div class="container">
-            <div class="row">
-                <table class="table table-hover text-center">
-                    <tr>
-                        <td><span class="today">Angela</span></td>
-                        <td><span class="today">Today @ 3:00pm<br><span class="activity">Shopping!</span></span></td>
-                    </tr>
-                    <tr>
-                        <td>Bob</td>
-                        <td>November 30</td>
-                    </tr>
-                    <tr>
-                        <td>Steven</td>
-                        <td>December 1<br><span class="activity">Play video games</span></td>
-                    </tr>
-                    <tr>
-                        <td>Nikkie</td>
-                        <td>December 7</td>
-                    </tr>
-                </table>
-            </div>
+                <div class="col-xs-4 col-md-2 text-center">
+                    <div class="person-box">
+                        <img src="img/people/business56.png" class="wow bounceIn clickPerson" data-friend-name="Bob"/>
+                        <h3>Bob</h3>
+                    </div>
+                </div>
+                <div class="col-xs-4 col-md-2 text-center">
+                    <div class="person-box">
+                        <img src="img/people/woman105.png" class="wow bounceIn clickPerson" data-friend-name="Sara"/>
+                        <h3>Sara</h3>
+                    </div>
+                </div>
+                <div class="col-xs-4 col-md-2 text-center">
+                    <div class="person-box">
+                        <img src="img/people/woman139.png" class="wow bounceIn clickPerson" data-friend-name="Sally"/>
+                        <h3>Sally</h3>
+                    </div>
+                </div>
+                <div class="col-xs-4 col-md-2 text-center">
+                    <div class="person-box">
+                        <img src="img/people/office-worker2.png" class="wow bounceIn clickPerson" data-friend-name="Tom"/>
+                        <h3>Tom</h3>
+                    </div>
+                </div>
+                    <div class="col-xs-4 col-md-2 text-center">
+                    <div class="person-box">
+                        <img src="img/people/woman139.png" class="wow bounceIn clickPerson" data-friend-name="Julie"/>
+                        <h3>Julie</h3>
+                    </div>
+                </div>
+                                <div class="col-xs-4 col-md-2 text-center">
+                    <div class="person-box">
+                        <img src="img/people/business56.png" class="wow bounceIn clickPerson" data-friend-name="Sage"/>
+                        <h3>Sage</h3>
+                    </div>
+                </div>
         </div>
     </section>
 
@@ -128,6 +144,16 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/creative.js"></script>
+
+    <script>
+        window.onload = function() {
+            $(".clickPerson").click(function() {
+                $("#friend").val(this.dataset.friendName);
+                console.log("clicked");
+                console.log(this.dataset.friendName);
+            });
+        }
+    </script>
 
 </body>
 
