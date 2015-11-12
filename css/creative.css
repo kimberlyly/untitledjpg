@@ -490,5 +490,27 @@ input[type="text"] {
 .bigInput {
     font-size: 20px;
     height: 35px;
-    width: 250px;
+    width: 300px;
+}
+
+.small {
+    color: #fff;
+    font-size: 14px;
+}
+
+.spin {
+    margin-left: 15px;
+}
+
+.info {
+    margin: 0px auto;
+}
+
+.circle {
+    padding: 0px;
+    margin: 0px auto;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    background-color: #fff;
 }

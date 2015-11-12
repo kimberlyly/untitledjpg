@@ -73,42 +73,14 @@
     <section class="bg-primary" id="main">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h1>What?</h1>
-                    <input type="text" name="activity" id="activity" class="bigInput" placeholder="Enter an Activity or Spin"><button class="btn btn-default btn-lg spin">Spin</button><br>
-                    <a href="MoreOptions.html"><h1 class="btn btn-default btn-xl"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></h1></a>
-                </div>
+              <div class="col-lg-8 col-lg-offset-2 text-center">
+                <h1>Are you sure?</h1><br>
+                <div id="textbox"></div><br><br>
+                <a href="boohoo.html"><h1 class="btn btn-default btn-xl">Yes</h1></a>
+                <a href="yay.html"><h1 class="btn btn-default btn-xl">Nvm</h1></a>
+              </div>
+			  
             </div>
-        </div>
-    </section>
-
-    <section id="services">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Interests</h2>
-                    <br>
-                    <br>
-                </div>
-                <div class="col-xs-6 col-md-6 text-center">
-                    <strong>Your Interests</strong>
-                    <hr class="primary">
-                    Climbing<br>
-                    Climbing<br>
-                    Climbing<br>
-                    Climbing<br>
-                    Climbing<br>
-                    Climbing<br>
-                </div>
-                <div class="col-xs-6 col-md-6 text-center">
-                    <strong>Friend's Interests</strong>
-                    <hr class="primary">
-                    Cooking<br>
-                    Eating<br>
-                    Playing video games<br>
-                </div>
-            </div>
-        </div>
         </div>
     </section>
 
@@ -128,16 +100,24 @@
 
     <script>
         window.onload = function() {
-            $(".spin").click(function() {
-                spin();
-            });
+            randomText();
         }
 
-        function spin() {
-            var activities = ["climb", "climb", "climb", "eat", "shop", "study", "play video games", "watch a movie"];
-            var random = Math.floor(Math.random() * activities.length);
-            $("#activity").val(activities[random]);
+        function randomText() {
+            var textArray = [
+                "Your friend would be so disappointed",
+                "School is important, but so are friends!",
+                "Isn't it ironic you're going to binge watch Friends?",
+                "I'm sure Netflix can wait",
+                "You could use a break!",
+                "It only takes an hour!"
+            ];
+            var random = Math.floor(Math.random() * textArray.length);
+            var text = textArray[random];
+            document.getElementById("textbox").innerHTML = "<h3>" + text + "</h3>";
         }
     </script>
+
 </body>
+
 </html>

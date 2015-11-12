@@ -53,16 +53,10 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="profile.html">Profile</a>
+                        <a class="page-scroll" href="#login">Login</a>
                     </li>
                     <li>
-                        <a href="inbox.html">Inbox</a>
-                    </li>
-                    <li>
-                        <a href="friends.html">Friends</a>
-                    </li>
-                    <li>
-                        <a href="settings.html">Settings</a>
+                        <a class="page-scroll" href="#register">Register</a>
                     </li>
                 </ul>
             </div>
@@ -70,45 +64,33 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
-    <section class="bg-primary" id="main">
+
+    <header>
+        <div class="header-content">
+            <div class="header-content-inner" id="login">
+                <h1>BYTE</h1>
+                <hr>
+                <p>Make time for your friends!</p>
+                <input type="text" name="username" placeholder="username" id="username"><br>
+                <input type="password" name="password" placeholder="password"><br><br>
+                <a href="home.php" class="btn btn-primary btn-xl page-scroll">Login</a><br><br><br>
+                <p class="text-faded small">Don't have an account? <a href="#register">Register!</a></p>
+            </div>
+        </div>
+    </header>
+
+    <section class="bg-primary" id="register">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <a href="who.html"><h1 class="btn btn-default btn-xl">Send an Inbyte!</h1></a>
+                    <h2 class="section-heading">Register</h2>
+                    <hr class="light">
+                    <p class="text-faded">Registering for an account on Byte is almost as easy as using it!</p>
+                    <label for="username">Username: </label><input type="text" name="username" placeholder="username" id="username"><br>
+                    <label for="password">Password: </label><input type="password" name="password" placeholder="password" id="password"><br>
+                    <label for="phone">Phone Number: </label><input type="text" name="phone" placeholder="(858) 888-8888" id="phone"><br>
+                    <a href="#" class="btn btn-default btn-xl">Register!</a>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="upcoming">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Upcoming Bytes</h2>
-                    <hr class="primary">
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <table class="table table-hover text-center">
-                    <tr>
-                        <td><span class="today">Angela</span></td>
-                        <td><span class="today">Today @ 3:00pm<br><span class="activity">Shopping!</span></span></td>
-                    </tr>
-                    <tr>
-                        <td>Bob</td>
-                        <td>November 30</td>
-                    </tr>
-                    <tr>
-                        <td>Steven</td>
-                        <td>December 1<br><span class="activity">Play video games</span></td>
-                    </tr>
-                    <tr>
-                        <td>Nikkie</td>
-                        <td>December 7</td>
-                    </tr>
-                </table>
             </div>
         </div>
     </section>
