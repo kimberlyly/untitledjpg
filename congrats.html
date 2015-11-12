@@ -46,7 +46,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="home.php">Byte</a>
+                <a class="navbar-brand page-scroll" href="#page-top">Byte</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -73,42 +73,13 @@
     <section class="bg-primary" id="main">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h1>What?</h1>
-                    <input type="text" name="activity" id="activity" class="bigInput" placeholder="Enter an Activity or Spin"><button class="btn btn-default btn-lg spin">Spin</button><br>
-                    <a href="MoreOptions.html"><h1 class="btn btn-default btn-xl"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></h1></a>
-                </div>
+              <div class="col-lg-8 col-lg-offset-2 text-center">
+                <h1>Your Inbyte Has Been Sent!</h1><br>
+                <div id="textbox"></div><br><br>
+                <a href="home.php"><h1 class="btn btn-default btn-xl">Home</h1></a>
+              </div>
+			  
             </div>
-        </div>
-    </section>
-
-    <section id="services">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Interests</h2>
-                    <br>
-                    <br>
-                </div>
-                <div class="col-xs-6 col-md-6 text-center">
-                    <strong>Your Interests</strong>
-                    <hr class="primary">
-                    Climbing<br>
-                    Climbing<br>
-                    Climbing<br>
-                    Climbing<br>
-                    Climbing<br>
-                    Climbing<br>
-                </div>
-                <div class="col-xs-6 col-md-6 text-center">
-                    <strong>Friend's Interests</strong>
-                    <hr class="primary">
-                    Cooking<br>
-                    Eating<br>
-                    Playing video games<br>
-                </div>
-            </div>
-        </div>
         </div>
     </section>
 
@@ -128,16 +99,28 @@
 
     <script>
         window.onload = function() {
-            $(".spin").click(function() {
-                spin();
-            });
+            randomText();
         }
 
-        function spin() {
-            var activities = ["climb", "climb", "climb", "eat", "shop", "study", "play video games", "watch a movie"];
-            var random = Math.floor(Math.random() * activities.length);
-            $("#activity").val(activities[random]);
+        function randomText() {
+            var textArray = [
+                "Have fun catching up!",
+                "I hope everythhing goes well!",
+                "Your friend is sooo going to appreciate you for this!",
+                "It's great you're making time for the people who matter!",
+                "You're awesome! Keep it up!",
+                "Your friend is going to love you.",
+                "Sounds like a fun day!",
+                "Let me know how everything goes!",
+                "Have fun hanging out!",
+                "Look at you, you social butterfly!"
+            ];
+            var random = Math.floor(Math.random() * textArray.length);
+            var text = textArray[random];
+            document.getElementById("textbox").innerHTML = "<h3>" + text + "</h3>";
         }
     </script>
+
 </body>
+
 </html>
